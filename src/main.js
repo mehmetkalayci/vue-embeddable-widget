@@ -2,4 +2,10 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+//createApp(App).mount('#app')
+
+function mountWidget(el) {
+    createApp(App).mount(el);
+}
+
+window.mountWidget = mountWidget;
