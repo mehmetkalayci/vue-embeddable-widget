@@ -6,6 +6,20 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 
 # Vue.js 3 Embeddable Widget
 
+define window.mountWidget method in the main.js
+```
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+
+function mountWidget(el) {
+    createApp(App).mount(el);
+}
+
+window.mountWidget = mountWidget;
+```
+
+
 vite.config.js
 ```
 import { defineConfig } from 'vite';
